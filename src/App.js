@@ -13,7 +13,7 @@ function App() {
         <
         section className = 'manu section' >
         <
-        div className = 'tite' >
+        div className = 'title' >
         <
         h2 > Our menu < /h2> <
         div className = 'underline' / >
