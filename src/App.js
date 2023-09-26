@@ -6,9 +6,10 @@ import items from './data';
 function App() {
 
     const [menuItems, setMenuItems] = useState(items);
-    const [categories, setCategories] = useState([]);
+    const [categories, setCategories] = useState([...new Map(items.map(item => [item["category"], item])).values()]);
 
     const filterItems = (category) => {
+        console.log(items);
         if (category === "all") {
             setMenuItems(items);
         }
@@ -28,6 +29,7 @@ function App() {
         <
         /div> <
         Categories filterItems = { filterItems }
+        categories = { categories }
         /> <
         Menu items = { menuItems }
         /> <
